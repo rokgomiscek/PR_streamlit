@@ -25,7 +25,7 @@ pw_slider = st.sidebar.slider(
 )
 new_data = pd.DataFrame([[sl_slider, sw_slider, pl_slider, pw_slider]], columns=['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)'])
 
-with open("pkl/model.pkl", 'rb') as fp:
+with open("streamlit/pkl/model.pkl", 'rb') as fp:
     model = pickle.load(fp)
 prediction = model.predict(new_data)[0]
 
